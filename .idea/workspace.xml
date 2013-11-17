@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20a84e7b-a41a-4aa3-9988-5c9d134419ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/domain/my/grails/Seramlah/auth/Authority.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/domain/my/grails/Seramlah/auth/Person.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/domain/my/grails/Seramlah/auth/PersonAuthority.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seramlah.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
-    <file path="/Dummy.txt" changelist="20a84e7b-a41a-4aa3-9988-5c9d134419ee" time="1384710732840" ignored="false" />
+    <file path="/Dummy.txt" changelist="20a84e7b-a41a-4aa3-9988-5c9d134419ee" time="1384710785430" ignored="false" />
     <file path="/a.dummy" changelist="20a84e7b-a41a-4aa3-9988-5c9d134419ee" time="1384710239350" ignored="false" />
     <file path="/PersonAuthority.groovy" changelist="20a84e7b-a41a-4aa3-9988-5c9d134419ee" time="1384710484780" ignored="false" />
+    <file path="/README.md" changelist="20a84e7b-a41a-4aa3-9988-5c9d134419ee" time="1384710968915" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,15 +84,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonAuthority.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PersonAuthority.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/my/grails/Seramlah/auth/PersonAuthority.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="96" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.79651165">
+            <state line="40" column="96" selection-start="1387" selection-end="1387" vertical-scroll-proportion="-8.22">
               <folding />
             </state>
           </provider>
           <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="15" selection-start="253" selection-end="253" vertical-scroll-proportion="0.18551236">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -131,6 +138,7 @@
         <option value="$PROJECT_DIR$/grails-app/domain/my/grails/Seramlah/auth/Person.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/my/grails/Seramlah/auth/Authority.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/my/grails/Seramlah/auth/PersonAuthority.groovy" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -360,6 +368,11 @@
       <created>1384708608331</created>
       <updated>1384708608331</updated>
     </task>
+    <task id="LOCAL-00001" summary="add person and auth domain">
+      <created>1384710790956</created>
+      <updated>1384710790956</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -481,12 +494,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/my/grails/Seramlah/auth/PersonAuthority.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="96" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.79651165">
+        <state line="40" column="96" selection-start="1387" selection-end="1387" vertical-scroll-proportion="-8.22">
           <folding />
         </state>
       </provider>
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="15" selection-start="253" selection-end="253" vertical-scroll-proportion="0.18551236">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
