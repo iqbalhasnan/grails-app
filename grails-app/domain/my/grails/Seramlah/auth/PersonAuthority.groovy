@@ -1,51 +1,65 @@
 package my.grails.Seramlah.auth
+
 import org.apache.commons.lang.builder.HashCodeBuilder
 
-class PersonAuthority {
+class PersonAuthority implements Serializable {
 
-    Person person
-    Authority authority
+	private static final long serialVersionUID = 1
 
-    boolean equals(other) {
-        if (!(other instanceof PersonAuthority)) {
-            return false
-        }
+	Person person
+	Authority authority
 
-        other.person?.id == person?.id &&
-                other.authority?.id == authority?.id
-    }
+	boolean equals(other) {
+		if (!(other instanceof PersonAuthority)) {
+			return false
+		}
 
-    int hashCode() {
-        def builder = new HashCodeBuilder()
-        if (person) builder.append(person.id)
-        if (authority) builder.append(authority.id)
-        builder.toHashCode()
-    }
+		other.person?.id == person?.id &&
+			other.authority?.id == authority?.id
+	}
 
-    static PersonAuthority get(long personId, long authorityId) {
-        find 'from PersonAuthority where person.id=:personId and authority.id=:authorityId',
-                [personId: personId, authorityId: authorityId]
-    }
+	int hashCode() {
+		def builder = new HashCodeBuilder()
+		if (person) builder.append(person.id)
+		if (authority) builder.append(authority.id)
+		builder.toHashCode()
+	}
 
-    static PersonAuthority create(Person person, Authority authority, boolean flush = false) {
-        new PersonAuthority(person: person, authority: authority).save(flush: flush, insert: true)
-    }
+	static PersonAuthority get(long personId, long authorityId) {
+		PersonAuthority.where {
+			person == Person.load(personId) &&
+			authority == Authority.load(authorityId)
+		}.get()
+	}
 
-    static boolean remove(Person person, Authority authority, boolean flush = false) {
-        PersonAuthority instance = PersonAuthority.findByPersonAndAuthority(person, authority)
-        instance ? instance.delete(flush: flush) : false
-    }
+	static PersonAuthority create(Person person, Authority authority, boolean flush = false) {
+		new PersonAuthority(person: person, authority: authority).save(flush: flush, insert: true)
+	}
 
-    static void removeAll(Person person) {
-        executeUpdate 'DELETE FROM PersonAuthority WHERE person=:person', [person: person]
-    }
+	static boolean remove(Person u, Authority r, boolean flush = false) {
 
-    static void removeAll(Authority authority) {
-        executeUpdate 'DELETE FROM PersonAuthority WHERE authority=:authority', [authority: authority]
-    }
+		int rowCount = PersonAuthority.where {
+			person == Person.load(u.id) &&
+			authority == Authority.load(r.id)
+		}.deleteAll()
 
-    static mapping = {
-        id composite: ['authority', 'person']
-        version false
-    }
+		rowCount > 0
+	}
+
+	static void removeAll(Person u) {
+		PersonAuthority.where {
+			person == Person.load(u.id)
+		}.deleteAll()
+	}
+
+	static void removeAll(Authority r) {
+		PersonAuthority.where {
+			authority == Authority.load(r.id)
+		}.deleteAll()
+	}
+
+	static mapping = {
+		id composite: ['authority', 'person']
+		version false
+	}
 }
